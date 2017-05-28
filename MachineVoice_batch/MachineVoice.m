@@ -261,7 +261,8 @@ global i_max_1
 global i_max_2
 global i_max_3
 %global pathname
- [filename, pathname] = uigetfile('*.mat','Select voice file');
+
+[filename, pathname] = uigetfile('*.wav','select a wave file to load');
 featureIndex=get(handles.lsbox,'Value')
 if featureIndex==1
     if (length(signal)<10)|(length(mhs_file)<2)
