@@ -133,6 +133,7 @@ function bt_load_Callback(hObject, eventdata, handles)
 % handles    structure with handles and user data (see GUIDATA)
 global signal
 global wav_file
+global pathname
 [filename, pathname] = uigetfile('*.wav','select a wave file to load');
 if pathname == 0
     errordlg('ERROR! No file selected!');
@@ -260,9 +261,9 @@ global max_3
 global i_max_1
 global i_max_2
 global i_max_3
-%global pathname
+global pathname
 
-[filename, pathname] = uigetfile('*.wav','select a wave file to load');
+%[filename, pathname] = uigetfile('*.wav','select a wave file to load');
 featureIndex=get(handles.lsbox,'Value')
 if featureIndex==1
     if (length(signal)<10)|(length(mhs_file)<2)
